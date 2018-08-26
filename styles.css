@@ -17,7 +17,8 @@ img {
 .meet__person-stuff,
 .other-nauts__guttered,
 .cool-links__heading,
-.cool-links__grid-item {
+.cool-links__grid-item,
+.apply__gutterized {
   padding: 0 24px;
   margin: 0 auto;
   max-width: 1040px;
@@ -25,7 +26,8 @@ img {
 .introduction__title,
 .meet__heading,
 .other-nauts__heading,
-.cool-links__heading {
+.cool-links__heading,
+.apply__heading {
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 80px;
   line-height: 84px;
@@ -40,22 +42,24 @@ img {
   line-height: 28px;
 }
 .introduction__job-link,
-.cool-links__link {
+.cool-links__link,
+.apply__job-link {
   background-color: #2d6471;
   border: 2px solid #acf07d;
   color: #fff;
-  display: block;
+  display: inline-block;
   font-size: 20px;
   line-height: 28px;
   font-weight: bold;
-  padding: 10px 14px;
+  padding: 10px 50px;
   position: relative;
   text-align: center;
   text-decoration: none;
   transition: color 250ms ease-in-out;
 }
 .introduction__job-link::after,
-.cool-links__link::after {
+.cool-links__link::after,
+.apply__job-link::after {
   background-color: #acf07d;
   bottom: 0;
   content: "";
@@ -68,18 +72,23 @@ img {
 }
 .introduction__job-link:hover::after,
 .cool-links__link:hover::after,
+.apply__job-link:hover::after,
 .introduction__job-link:focus::after,
-.cool-links__link:focus::after {
+.cool-links__link:focus::after,
+.apply__job-link:focus::after {
   transform: scaleX(1);
 }
 .introduction__job-link:hover,
 .cool-links__link:hover,
+.apply__job-link:hover,
 .introduction__job-link:focus,
-.cool-links__link:focus {
+.cool-links__link:focus,
+.apply__job-link:focus {
   color: #2d6471;
 }
 .introduction__job-link > span,
-.cool-links__link > span {
+.cool-links__link > span,
+.apply__job-link > span {
   position: relative;
   z-index: 1;
 }
@@ -272,6 +281,9 @@ body {
   justify-content: space-between;
   margin-bottom: 8px;
 }
+.cool-links__link-container {
+  text-align: center;
+}
 .cool-links__grid-image {
   height: 100%;
   object-fit: cover;
@@ -294,4 +306,29 @@ body {
 .cool-links__link-image {
   display: block;
   margin-bottom: 16px;
+}
+.apply {
+  background-color: #fbfaf7;
+  padding-top: 35px;
+  padding-bottom: 60px;
+}
+.apply__heading {
+  color: #2d6471;
+  margin-bottom: 18px;
+}
+.apply__text {
+  color: #1ea0b6;
+  font-size: 26px;
+  line-height: 34px;
+  margin-bottom: 40px;
+}
+.footer {
+  background-color: #48a9bf;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.footer__logo {
+  height: 60px;
+  width: 100px;
 }

@@ -44,11 +44,11 @@ $linkButton
     background-color astral
     border 2px solid avocado
     color white
-    display block
+    display inline-block
     font-size 20px
     line-height 28px
     font-weight bold
-    padding 10px 14px
+    padding 10px 50px
     position relative
     text-align center
     text-decoration none
@@ -283,6 +283,9 @@ body
         justify-content space-between
         margin-bottom 8px
 
+    &__link-container
+        text-align center
+
     &__link
         @extend $linkButton
 
@@ -308,3 +311,35 @@ body
     &__link-image
         display block
         margin-bottom 16px
+
+.apply
+    background-color parchment
+    padding-top 35px
+    padding-bottom 60px
+
+    &__gutterized
+        @extend $gutterize
+
+    &__heading
+        @extend $headline
+        color astral
+        margin-bottom 18px
+
+    &__text
+        color pacificAA
+        font-size 26px
+        line-height 34px
+        margin-bottom 40px
+
+    &__job-link
+        @extend $linkButton
+
+.footer
+    background-color pacific
+    display flex
+    justify-content center
+    padding 20px 0
+
+    &__logo
+        height 60px
+        width 100px
