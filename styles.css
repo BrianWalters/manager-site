@@ -5,12 +5,21 @@
 *::before {
   box-sizing: border-box;
 }
-.introduction__guttered {
+img {
+  height: auto;
+  max-width: 100%;
+}
+.introduction__guttered,
+.meet__heading,
+.meet__title,
+.meet__name,
+.meet__person-stuff {
   padding: 0 24px;
   margin: 0 auto;
   max-width: 1040px;
 }
-.introduction__title {
+.introduction__title,
+.meet__heading {
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 80px;
   line-height: 84px;
@@ -39,6 +48,10 @@
 body {
   font-family: 'Lato', 'Arial', sans-serif;
 }
+.header {
+  background-color: #48a9bf;
+  padding: 20px 0;
+}
 .introduction {
   background-color: #fbfaf7;
   padding: 35px 0 45px;
@@ -54,4 +67,49 @@ body {
 .introduction__long-details {
   color: #2d6471;
   margin-bottom: 32px;
+}
+.meet {
+  background-color: #2d6471;
+}
+.meet__heading {
+  color: #acf07d;
+}
+.meet__person-section {
+  padding: 30px 0 0 0;
+}
+.meet__person-section--astral {
+  background-color: #2d6471;
+  color: #fff;
+}
+.meet__person-section--avocado {
+  background-color: #acf07d;
+  color: #2d6471;
+}
+.meet__person-section--maize {
+  background-color: #f6db60;
+  color: #2d6471;
+}
+.meet__title {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.meet__title--maize {
+  color: #f6db60;
+}
+.meet__name {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 40px;
+  line-height: 42px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.meet__person-stuff {
+  font-size: 20px;
+  line-height: 28px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }

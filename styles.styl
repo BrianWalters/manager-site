@@ -3,8 +3,11 @@ maxContentWidth = 1040px
 
 astral = #2d6471
 avocado = #acf07d
+maize = #f6db60
 pacific = #48a9bf
 parchment = #fbfaf7
+
+pathway = 'Pathway Gothic One', sans-serif
 
 *
     box-sizing border-box
@@ -12,13 +15,17 @@ parchment = #fbfaf7
     &::after, &::before
         box-sizing border-box
 
+img
+    height auto
+    max-width 100%
+
 $gutterize
     padding 0 gutter
     margin 0 auto
     max-width maxContentWidth
 
 $headline
-    font-family 'Pathway Gothic One', sans-serif
+    font-family pathway
     font-size 80px
     line-height 84px
     text-transform uppercase
@@ -46,6 +53,10 @@ $linkButton
 body
     font-family 'Lato', 'Arial', sans-serif
 
+.header
+    background-color pacific
+    padding 20px 0
+
 .introduction
     background-color parchment
     padding 35px 0 45px
@@ -70,3 +81,53 @@ body
 
     &__job-link
         @extend $linkButton
+
+.meet
+    background-color astral
+
+    &__heading
+        @extend $headline
+        @extend $gutterize
+        color avocado
+
+    &__person-section
+        padding 30px 0 0 0
+
+        &--astral
+            background-color astral
+            color white
+
+        &--avocado
+            background-color avocado
+            color astral
+
+        &--maize
+            background-color maize
+            color astral
+
+    &__title
+        @extend $gutterize
+        font-size 14px
+        font-weight bold
+        letter-spacing 0.8px
+        line-height 1
+        margin-bottom 8px
+        text-transform uppercase
+
+        &--maize
+            color maize
+
+    &__name
+        @extend $gutterize
+        font-family pathway
+        font-size 40px
+        line-height 42px
+        margin-bottom 20px
+        text-transform uppercase
+
+    &__person-stuff
+        @extend $gutterize
+        font-size 20px
+        line-height 28px
+        padding-top 30px
+        padding-bottom 30px
