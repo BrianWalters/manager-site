@@ -5,6 +5,7 @@ astral = #2d6471
 avocado = #acf07d
 maize = #f6db60
 pacific = #48a9bf
+pacificAA = #1EA0B6
 parchment = #fbfaf7
 
 pathway = 'Pathway Gothic One', sans-serif
@@ -18,6 +19,7 @@ pathway = 'Pathway Gothic One', sans-serif
 img
     height auto
     max-width 100%
+    vertical-align bottom
 
 $gutterize
     padding 0 gutter
@@ -50,6 +52,19 @@ $linkButton
     text-align center
     text-decoration none
 
+$jobTitle
+    font-size 14px
+    font-weight bold
+    letter-spacing 0.8px
+    line-height 1
+    text-transform uppercase
+
+$personName
+    font-family pathway
+    font-size 40px
+    line-height 42px
+    text-transform uppercase
+
 body
     font-family 'Lato', 'Arial', sans-serif
 
@@ -66,7 +81,7 @@ body
 
     &__title
         @extend $headline
-        color pacific
+        color pacificAA
         margin-bottom 20px
 
     &__intro-paragraph
@@ -83,14 +98,24 @@ body
         @extend $linkButton
 
 .meet
-    background-color astral
+    background-color parchment
 
     &__heading
         @extend $headline
         @extend $gutterize
-        color avocado
+        color pacificAA
+        padding-top 40px
+        padding-bottom 40px
+
+    &__people
+        margin 0 auto
+        max-width maxContentWidth
+
+        @media (min-width 700px)
+            display flex
 
     &__person-section
+        flex 1 1 0
         padding 30px 0 0 0
 
         &--astral
@@ -107,23 +132,19 @@ body
 
     &__title
         @extend $gutterize
-        font-size 14px
-        font-weight bold
-        letter-spacing 0.8px
-        line-height 1
+        @extend $jobTitle
         margin-bottom 8px
-        text-transform uppercase
 
         &--maize
             color maize
 
     &__name
         @extend $gutterize
-        font-family pathway
-        font-size 40px
-        line-height 42px
+        @extend $personName
         margin-bottom 20px
-        text-transform uppercase
+
+    &__photo-container
+        margin 0 24px
 
     &__person-stuff
         @extend $gutterize
@@ -131,3 +152,70 @@ body
         line-height 28px
         padding-top 30px
         padding-bottom 30px
+
+.other-nauts
+    background-color parchment
+
+    &__guttered
+        @extend $gutterize
+
+    &__heading
+        @extend $headline
+        color pacificAA
+        padding-top 40px
+        padding-bottom 40px
+
+    &__photos
+        display grid
+        grid-template-columns 1fr 1fr
+        grid-gap 24px
+
+        @media (min-width 700px)
+            grid-template-columns repeat(4, 1fr)
+
+    &__photo-container
+        overflow hidden
+        perspective 200px
+        position relative
+
+    &__info
+        align-items center
+        background-color maize
+        bottom 0
+        color white
+        display flex
+        flex-direction column
+        left 0
+        justify-content center
+        position absolute
+        right 0
+        text-align center
+        top 0
+        transform rotateY(180deg)
+        transform-origin 0 0
+        transition transform 250ms ease-in-out
+
+        &--right-side
+            transform rotateY(-180deg)
+            transform-origin 100% 0
+
+    &__photo-container:hover &__info
+        transform rotateY(0deg)
+
+    &__title
+        @extend $jobTitle
+        color astral
+
+    &__name
+        @extend $personName
+        color astral
+
+.cool-links
+    background-color parchment
+
+    &__heading
+        @extend $gutterize
+        @extend $headline
+        color pacificAA
+        padding-top 40px
+        padding-bottom 40px

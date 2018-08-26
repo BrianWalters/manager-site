@@ -8,18 +8,23 @@
 img {
   height: auto;
   max-width: 100%;
+  vertical-align: bottom;
 }
 .introduction__guttered,
 .meet__heading,
 .meet__title,
 .meet__name,
-.meet__person-stuff {
+.meet__person-stuff,
+.other-nauts__guttered,
+.cool-links__heading {
   padding: 0 24px;
   margin: 0 auto;
   max-width: 1040px;
 }
 .introduction__title,
-.meet__heading {
+.meet__heading,
+.other-nauts__heading,
+.cool-links__heading {
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 80px;
   line-height: 84px;
@@ -45,6 +50,21 @@ img {
   text-align: center;
   text-decoration: none;
 }
+.meet__title,
+.other-nauts__title {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.meet__name,
+.other-nauts__name {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 40px;
+  line-height: 42px;
+  text-transform: uppercase;
+}
 body {
   font-family: 'Lato', 'Arial', sans-serif;
 }
@@ -57,7 +77,7 @@ body {
   padding: 35px 0 45px;
 }
 .introduction__title {
-  color: #48a9bf;
+  color: #1ea0b6;
   margin-bottom: 20px;
 }
 .introduction__intro-paragraph {
@@ -69,12 +89,24 @@ body {
   margin-bottom: 32px;
 }
 .meet {
-  background-color: #2d6471;
+  background-color: #fbfaf7;
 }
 .meet__heading {
-  color: #acf07d;
+  color: #1ea0b6;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.meet__people {
+  margin: 0 auto;
+  max-width: 1040px;
+}
+@media (min-width: 700px) {
+  .meet__people {
+    display: flex;
+  }
 }
 .meet__person-section {
+  flex: 1 1 0;
   padding: 30px 0 0 0;
 }
 .meet__person-section--astral {
@@ -90,26 +122,81 @@ body {
   color: #2d6471;
 }
 .meet__title {
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 0.8px;
-  line-height: 1;
   margin-bottom: 8px;
-  text-transform: uppercase;
 }
 .meet__title--maize {
   color: #f6db60;
 }
 .meet__name {
-  font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 40px;
-  line-height: 42px;
   margin-bottom: 20px;
-  text-transform: uppercase;
+}
+.meet__photo-container {
+  margin: 0 24px;
 }
 .meet__person-stuff {
   font-size: 20px;
   line-height: 28px;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+.other-nauts {
+  background-color: #fbfaf7;
+}
+.other-nauts__heading {
+  color: #1ea0b6;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.other-nauts__photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+}
+@media (min-width: 700px) {
+  .other-nauts__photos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.other-nauts__photo-container {
+  overflow: hidden;
+  perspective: 200px;
+  position: relative;
+}
+.other-nauts__info {
+  align-items: center;
+  background-color: #f6db60;
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transform: rotateY(180deg);
+  transform-origin: 0 0;
+  transition: transform 250ms ease-in-out;
+}
+.other-nauts__info--right-side {
+  transform: rotateY(-180deg);
+  transform-origin: 100% 0;
+}
+.other-nauts__photo-container:hover .other-nauts__info {
+  transform: rotateY(0deg);
+}
+.other-nauts__title {
+  color: #2d6471;
+}
+.other-nauts__name {
+  color: #2d6471;
+}
+.cool-links {
+  background-color: #fbfaf7;
+}
+.cool-links__heading {
+  color: #1ea0b6;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
