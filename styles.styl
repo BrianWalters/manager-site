@@ -1,0 +1,72 @@
+gutter = 24px
+maxContentWidth = 1040px
+
+astral = #2d6471
+avocado = #acf07d
+pacific = #48a9bf
+parchment = #fbfaf7
+
+*
+    box-sizing border-box
+
+    &::after, &::before
+        box-sizing border-box
+
+$gutterize
+    padding 0 gutter
+    margin 0 auto
+    max-width maxContentWidth
+
+$headline
+    font-family 'Pathway Gothic One', sans-serif
+    font-size 80px
+    line-height 84px
+    text-transform uppercase
+
+$introText
+    font-size 26px
+    line-height 34px
+
+$paragraph
+    font-size 20px
+    line-height 28px
+
+$linkButton
+    background-color astral
+    border 2px solid avocado
+    color white
+    display block
+    font-size 20px
+    line-height 28px
+    font-weight bold
+    padding 10px 14px
+    text-align center
+    text-decoration none
+
+body
+    font-family 'Lato', 'Arial', sans-serif
+
+.introduction
+    background-color parchment
+    padding 35px 0 45px
+
+    &__guttered
+        @extend $gutterize
+
+    &__title
+        @extend $headline
+        color pacific
+        margin-bottom 20px
+
+    &__intro-paragraph
+        @extend $introText
+        color astral
+        margin-bottom 16px
+
+    &__long-details
+        @extend $paragraph
+        color astral
+        margin-bottom 32px
+
+    &__job-link
+        @extend $linkButton

@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.introduction__guttered {
+  padding: 0 24px;
+  margin: 0 auto;
+  max-width: 1040px;
+}
+.introduction__title {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 80px;
+  line-height: 84px;
+  text-transform: uppercase;
+}
+.introduction__intro-paragraph {
+  font-size: 26px;
+  line-height: 34px;
+}
+.introduction__long-details {
+  font-size: 20px;
+  line-height: 28px;
+}
+.introduction__job-link {
+  background-color: #2d6471;
+  border: 2px solid #acf07d;
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: bold;
+  padding: 10px 14px;
+  text-align: center;
+  text-decoration: none;
+}
+body {
+  font-family: 'Lato', 'Arial', sans-serif;
+}
+.introduction {
+  background-color: #fbfaf7;
+  padding: 35px 0 45px;
+}
+.introduction__title {
+  color: #48a9bf;
+  margin-bottom: 20px;
+}
+.introduction__intro-paragraph {
+  color: #2d6471;
+  margin-bottom: 16px;
+}
+.introduction__long-details {
+  color: #2d6471;
+  margin-bottom: 32px;
+}
