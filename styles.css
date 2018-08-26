@@ -16,7 +16,8 @@ img {
 .meet__name,
 .meet__person-stuff,
 .other-nauts__guttered,
-.cool-links__heading {
+.cool-links__heading,
+.cool-links__grid-item {
   padding: 0 24px;
   margin: 0 auto;
   max-width: 1040px;
@@ -38,7 +39,8 @@ img {
   font-size: 20px;
   line-height: 28px;
 }
-.introduction__job-link {
+.introduction__job-link,
+.cool-links__link {
   background-color: #2d6471;
   border: 2px solid #acf07d;
   color: #fff;
@@ -47,8 +49,39 @@ img {
   line-height: 28px;
   font-weight: bold;
   padding: 10px 14px;
+  position: relative;
   text-align: center;
   text-decoration: none;
+  transition: color 250ms ease-in-out;
+}
+.introduction__job-link::after,
+.cool-links__link::after {
+  background-color: #acf07d;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.introduction__job-link:hover::after,
+.cool-links__link:hover::after,
+.introduction__job-link:focus::after,
+.cool-links__link:focus::after {
+  transform: scaleX(1);
+}
+.introduction__job-link:hover,
+.cool-links__link:hover,
+.introduction__job-link:focus,
+.cool-links__link:focus {
+  color: #2d6471;
+}
+.introduction__job-link > span,
+.cool-links__link > span {
+  position: relative;
+  z-index: 1;
 }
 .meet__title,
 .other-nauts__title {
@@ -70,6 +103,8 @@ body {
 }
 .header {
   background-color: #48a9bf;
+  display: flex;
+  justify-content: center;
   padding: 20px 0;
 }
 .introduction {
@@ -102,11 +137,12 @@ body {
 }
 @media (min-width: 700px) {
   .meet__people {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
   }
 }
 .meet__person-section {
-  flex: 1 1 0;
   padding: 30px 0 0 0;
 }
 .meet__person-section--astral {
@@ -199,4 +235,63 @@ body {
   color: #1ea0b6;
   padding-top: 40px;
   padding-bottom: 40px;
+}
+.cool-links__grid {
+  margin: 0 auto;
+  max-width: 1040px;
+}
+@media (min-width: 700px) {
+  .cool-links__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
+  }
+}
+.cool-links__grid-item {
+  background-color: #2d6471;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.cool-links__grid-item--pacific {
+  background-color: #48a9bf;
+  grid-row: 2/3;
+}
+.cool-links__grid-item--image {
+  grid-column: span 2;
+}
+.cool-links__grid-item--avocado {
+  background-color: #acf07d;
+}
+.cool-links__grid-item--maize {
+  background-color: #f6db60;
+}
+.cool-links__top {
+  align-items: flex-start;
+  color: #acf07d;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.cool-links__grid-image {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.cool-links__grid-heading {
+  color: #fff;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 40px;
+  line-height: 42px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.cool-links__description {
+  color: #fff;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 14px;
+}
+.cool-links__link-image {
+  display: block;
+  margin-bottom: 16px;
 }

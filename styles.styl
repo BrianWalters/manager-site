@@ -49,8 +49,33 @@ $linkButton
     line-height 28px
     font-weight bold
     padding 10px 14px
+    position relative
     text-align center
     text-decoration none
+    transition color 250ms ease-in-out
+
+    &::after
+        background-color avocado
+        bottom 0
+        content ""
+        left 0
+        position absolute
+        right 0
+        top 0
+        transform scaleX(0)
+        transition transform 250ms ease-in-out
+
+    &:hover::after
+    &:focus::after
+        transform scaleX(1)
+
+    &:hover
+    &:focus
+        color astral
+
+    > span
+        position relative
+        z-index 1
 
 $jobTitle
     font-size 14px
@@ -70,6 +95,8 @@ body
 
 .header
     background-color pacific
+    display flex
+    justify-content center
     padding 20px 0
 
 .introduction
@@ -112,10 +139,11 @@ body
         max-width maxContentWidth
 
         @media (min-width 700px)
-            display flex
+            display grid
+            grid-template-columns repeat(3, 1fr)
+            grid-gap 24px
 
     &__person-section
-        flex 1 1 0
         padding 30px 0 0 0
 
         &--astral
@@ -219,3 +247,64 @@ body
         color pacificAA
         padding-top 40px
         padding-bottom 40px
+
+    &__grid
+        margin 0 auto
+        max-width maxContentWidth
+
+        @media (min-width 700px)
+            display grid
+            grid-template-columns repeat(3, 1fr)
+            grid-gap 24px
+
+    &__grid-item
+        @extend $gutterize
+        background-color astral
+        padding-top 24px
+        padding-bottom 24px
+
+        &--pacific
+            background-color pacific
+            grid-row 2 / 3
+
+        &--image
+            grid-column span 2
+
+        &--avocado
+            background-color avocado
+
+        &--maize
+            background-color maize
+
+    &__top
+        align-items flex-start
+        color avocado
+        display flex
+        justify-content space-between
+        margin-bottom 8px
+
+    &__link
+        @extend $linkButton
+
+    &__grid-image
+        height 100%
+        object-fit cover
+        width 100%
+
+    &__grid-heading
+        color white
+        font-family pathway
+        font-size 40px
+        line-height 42px
+        margin-bottom 16px
+        text-transform uppercase
+
+    &__description
+        color white
+        font-size 20px
+        line-height 28px
+        margin-bottom 14px
+
+    &__link-image
+        display block
+        margin-bottom 16px
