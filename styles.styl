@@ -101,7 +101,10 @@ body
 
 .introduction
     background-color parchment
-    padding 35px 0 45px
+    padding 0 0 45px
+
+    &__team-image
+        clip-path polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%)
 
     &__guttered
         @extend $gutterize
@@ -126,6 +129,7 @@ body
 
 .meet
     background-color parchment
+    padding-bottom 80px
 
     &__heading
         @extend $headline
@@ -182,16 +186,23 @@ body
         padding-bottom 30px
 
 .other-nauts
-    background-color parchment
+    background-color astral
+    padding-top 40px
+    padding-bottom 40px
 
     &__guttered
         @extend $gutterize
 
     &__heading
         @extend $headline
-        color pacificAA
-        padding-top 40px
-        padding-bottom 40px
+        color maize
+        padding-bottom 20px
+
+    &__paragraph
+        @extend $paragraph
+        color parchment
+        margin-bottom 40px
+
 
     &__photos
         display grid

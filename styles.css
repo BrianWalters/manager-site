@@ -37,7 +37,8 @@ img {
   font-size: 26px;
   line-height: 34px;
 }
-.introduction__long-details {
+.introduction__long-details,
+.other-nauts__paragraph {
   font-size: 20px;
   line-height: 28px;
 }
@@ -118,7 +119,10 @@ body {
 }
 .introduction {
   background-color: #fbfaf7;
-  padding: 35px 0 45px;
+  padding: 0 0 45px;
+}
+.introduction__team-image {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
 }
 .introduction__title {
   color: #1ea0b6;
@@ -134,6 +138,7 @@ body {
 }
 .meet {
   background-color: #fbfaf7;
+  padding-bottom: 80px;
 }
 .meet__heading {
   color: #1ea0b6;
@@ -185,12 +190,17 @@ body {
   padding-bottom: 30px;
 }
 .other-nauts {
-  background-color: #fbfaf7;
-}
-.other-nauts__heading {
-  color: #1ea0b6;
+  background-color: #2d6471;
   padding-top: 40px;
   padding-bottom: 40px;
+}
+.other-nauts__heading {
+  color: #f6db60;
+  padding-bottom: 20px;
+}
+.other-nauts__paragraph {
+  color: #fbfaf7;
+  margin-bottom: 40px;
 }
 .other-nauts__photos {
   display: grid;
