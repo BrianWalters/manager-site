@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="133px" height="97.17px" viewBox="0 0 193 141" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Template" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Large-Viewport" transform="translate(-202.000000, -578.000000)">
+            <g id="Group" transform="translate(202.000000, 578.000000)">
+                <polygon id="Shape" fill="#F6DB60" fill-rule="nonzero" points="162.075018 117.258727 31.9089585 141 0 35.4671458 193 0"></polygon>
+                <path d="M62.52,107 L62.52,81.64 L50.44,81.64 L50.44,107 L44.04,107 L44.04,51 L50.44,51 L50.44,76.52 L62.52,76.52 L62.52,51 L68.84,51 L68.84,107 L62.52,107 Z M85.32,81.64 L85.32,101.88 L99.24,101.88 L99.24,107 L78.92,107 L78.92,51 L99,51 L99,56.12 L85.32,56.12 L85.32,76.52 L97.8,76.52 L97.8,81.64 L85.32,81.64 Z M120.68,107 L114.44,107 L114.44,88.28 L103.88,51 L110.12,51 L117.56,79.88 L124.92,51 L131.16,51 L120.68,88.28 L120.68,107 Z M138.36,93.64 L137,51 L144.04,51 L142.84,93.64 L138.36,93.64 Z M137.4,107 L137.4,99.64 L143.72,99.64 L143.72,107 L137.4,107 Z" id="HEY!" fill="#2D6471"></path>
+            </g>
+        </g>
+    </g>
+</svg>

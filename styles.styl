@@ -103,16 +103,36 @@ body
     background-color parchment
     padding 0 0 45px
 
+    &__image-container
+        position relative
+
     &__team-image
         clip-path polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%)
+        display block
+        margin 0 auto
+
+    &__shard-hey
+        position absolute
+        bottom 0
+        left gutter 
+
+        maxContentWidthWithGutters = maxContentWidth + gutter + gutter
+
+        @media (min-width maxContentWidth + gutter + gutter)
+            left s('calc((100vw - %s) / 2)', maxContentWidthWithGutters)
+
+        @media (max-width 1040px)
+            bottom -50px
 
     &__guttered
         @extend $gutterize
+        padding-top 80px
 
     &__title
         @extend $headline
         color pacificAA
         margin-bottom 20px
+        text-transform none
 
     &__intro-paragraph
         @extend $introText

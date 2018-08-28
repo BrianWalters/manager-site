@@ -121,12 +121,36 @@ body {
   background-color: #fbfaf7;
   padding: 0 0 45px;
 }
+.introduction__image-container {
+  position: relative;
+}
 .introduction__team-image {
   clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
+  display: block;
+  margin: 0 auto;
+}
+.introduction__shard-hey {
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+}
+@media (min-width: 1088px) {
+  .introduction__shard-hey {
+    left: calc((100vw - 1088px) / 2);
+  }
+}
+@media (max-width: 1040px) {
+  .introduction__shard-hey {
+    bottom: -50px;
+  }
+}
+.introduction__guttered {
+  padding-top: 80px;
 }
 .introduction__title {
   color: #1ea0b6;
   margin-bottom: 20px;
+  text-transform: none;
 }
 .introduction__intro-paragraph {
   color: #2d6471;
