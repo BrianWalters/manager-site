@@ -197,6 +197,19 @@ body
 
     &__photo-container
         margin 0 24px
+        position relative
+
+    &__photo-hover
+        opacity 0
+        transition: opacity .150s ease-in
+        position absolute  
+        left 0
+        top 0
+        right 0 
+        bottom 0
+        
+        &:hover 
+            opacity 1
 
     &__person-stuff
         @extend $gutterize
