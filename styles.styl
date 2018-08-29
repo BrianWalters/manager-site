@@ -377,8 +377,10 @@ body
 
 .apply
     background-color pacificAA
+    overflow hidden
     padding-top 100px
     padding-bottom 60px
+    position relative
 
     &__gutterized
         @extend $gutterize
@@ -398,6 +400,21 @@ body
     &__job-link
         @extend $linkButton
 
+    &__tyler-cheeseburger
+        background transparent url(tyler-cake.jpg) no-repeat center
+        background-size cover
+        bottom 0
+        left 0
+        pointer-events none
+        position absolute
+        right 0
+        top 0
+        transform translateY(-100%)
+        transition transform 1250ms ease-in
+
+        &--showing
+            transform translateY(0)
+
 .footer
     background-color astral
     display flex
@@ -415,11 +432,3 @@ body
         bottom 0
         position absolute
         right 0
-
-    &__tyler-cheeseburger
-        background transparent
-        bottom 0
-        left 0
-        position absolute
-        right 0
-        top 0
