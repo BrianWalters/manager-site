@@ -31,6 +31,8 @@ img {
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 80px;
   line-height: 84px;
+  font-weight: bold;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 .introduction__intro-paragraph {
@@ -150,7 +152,6 @@ body {
 .introduction__title {
   color: #2d6471;
   margin-bottom: 20px;
-  text-transform: none;
 }
 .introduction__intro-paragraph {
   color: #2d6471;
