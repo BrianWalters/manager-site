@@ -31,10 +31,8 @@ img {
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 80px;
   line-height: 84px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  padding-left: 0px;
 }
 .introduction__intro-paragraph {
   font-size: 26px;
@@ -319,7 +317,7 @@ body {
   grid-column: span 2;
 }
 .cool-links__grid-item--avocado {
-  background-color: #acf07d;
+  background-color: #48a9bf;
 }
 .cool-links__grid-item--maize {
   background-color: #f6db60;
