@@ -173,11 +173,16 @@ body {
   margin: 0 auto;
   max-width: 1040px;
 }
-@media (min-width: 700px) {
+@media (min-width: 550px) {
   .meet__people {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 24px;
+  }
+}
+@media (min-width: 900px) {
+  .meet__people {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 .meet__person-section {
@@ -195,14 +200,28 @@ body {
   background-color: #f6db60;
   color: #2d6471;
 }
+.meet__person-section--pacific {
+  background-color: #1ea0b6;
+  color: #fbfaf7;
+}
 .meet__title {
   margin-bottom: 8px;
+}
+@media (min-width: 900px) {
+  .meet__title {
+    min-height: 2em;
+  }
 }
 .meet__title--maize {
   color: #f6db60;
 }
 .meet__name {
   margin-bottom: 20px;
+}
+@media (min-width: 550px) {
+  .meet__name {
+    min-height: 60px;
+  }
 }
 .meet__photo-container {
   margin: 0 24px;
@@ -263,6 +282,7 @@ body {
   flex-direction: column;
   left: 0;
   justify-content: center;
+  padding: 8px;
   position: absolute;
   right: 0;
   text-align: center;
