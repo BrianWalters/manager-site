@@ -104,8 +104,8 @@ img {
 .meet__name,
 .other-nauts__name {
   font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 40px;
-  line-height: 42px;
+  font-size: 28px;
+  line-height: 30px;
   text-transform: uppercase;
 }
 body {
@@ -148,7 +148,7 @@ body {
   padding-top: 80px;
 }
 .introduction__title {
-  color: #1ea0b6;
+  color: #2d6471;
   margin-bottom: 20px;
   text-transform: none;
 }
