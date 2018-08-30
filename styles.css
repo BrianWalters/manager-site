@@ -304,6 +304,11 @@ body {
 .other-nauts__name {
   color: #2d6471;
 }
+.other-nauts__link-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
 .cool-links {
   background-color: #fbfaf7;
   padding-bottom: 100px;
